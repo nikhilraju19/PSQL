@@ -1,0 +1,15 @@
+SELECT COUNT(*) AS total_students FROM students;
+SELECT department, COUNT(*) AS student_count FROM students GROUP BY department;
+SELECT MAX(semester) AS max_semester FROM students;
+SELECT MIN(semester) AS min_semester FROM students;
+SELECT AVG(semester) AS avg_semester FROM students;
+SELECT COUNT(*) AS female_students FROM students WHERE gender = 'Female';
+SELECT COUNT(*) AS male_students FROM students WHERE gender = 'Male';
+SELECT COUNT(*) AS hostel_students FROM hostel;
+SELECT department, COUNT(*) AS department_count FROM students GROUP BY department ORDER BY COUNT(*) DESC LIMIT 3;
+SELECT semester, COUNT(*) AS student_count FROM students GROUP BY semester;
+SELECT COUNT(DISTINCT department) AS unique_departments FROM students;
+SELECT l_name,COUNT(*) FROM students WHERE l_name LIKE 'R%' GROUP BY l_name;
+SELECT COUNT(DISTINCT room_number) FROM hostel;
+SELECT MAX(joining_date) FROM hostel;
+SELECT MIN(joining_date) FROM hostel;
