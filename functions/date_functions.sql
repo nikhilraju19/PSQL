@@ -1,0 +1,15 @@
+SELECT CURDATE();
+SELECT NOW();
+SELECT id, YEAR(joining_date) FROM hostel;
+SELECT id, MONTH(joining_date) FROM hostel;
+SELECT id, DAY(joining_date) FROM hostel;
+SELECT id, DAYNAME(joining_date) FROM hostel;
+SELECT id, MONTHNAME(joining_date) FROM hostel;
+SELECT * FROM hostel WHERE YEAR(joining_date) = 2024;
+SELECT * FROM hostel WHERE MONTH(joining_date) = 2;
+SELECT * FROM hostel WHERE DAYNAME(joining_date) = 'Monday';
+SELECT id, joining_date, DATE_ADD(joining_date, INTERVAL 10 DAY) AS extended_stay FROM hostel;
+SELECT id, joining_date, DATE_SUB(joining_date, INTERVAL 5 DAY) AS early_leave FROM hostel;
+SELECT id, joining_date, DATEDIFF(CURDATE(), joining_date) AS days_since_joining FROM hostel;
+SELECT * FROM hostel WHERE DATEDIFF(CURDATE(), joining_date) < 365;
+SELECT id, DATE_FORMAT(joining_date, '%d-%m-%Y') AS formatted_date FROM hostel;

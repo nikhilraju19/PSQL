@@ -1,0 +1,11 @@
+SELECT UPPER(f_name) FROM students;
+SELECT LOWER(l_name) FROM students;
+SELECT CONCAT(f_name, ' ', l_name) AS full_name FROM students;
+SELECT f_name, LENGTH(f_name) FROM students;
+SELECT LEFT(f_name, 3) FROM students;
+SELECT RIGHT(l_name, 3) FROM students;
+SELECT REPLACE(course, 'Btech', 'Bachelor of Technology') FROM students;
+SELECT * FROM students WHERE f_name LIKE '%a%';
+SELECT REVERSE(f_name) FROM students;
+SELECT f_name, INSTR(f_name, 'a') FROM students;
+SELECT TRIM(department) FROM students;
